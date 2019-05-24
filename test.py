@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 """
 -------------------------------------------------
    File Name：     test
@@ -10,9 +11,10 @@
                    2019/5/16 0016:
 -------------------------------------------------
 """
-path = 'G:/web-admin/admin\static\css/'
-new_path = path[0:-1]
-print(new_path)
+path = os.getcwd()
+print('path:{}'.format(path))
+abs_path = os.path.join(path, 'dist')
+print('abs_path:{}'.format(abs_path))
 a = path.split('\\')[1:]
 print(a)
 path = '/home'

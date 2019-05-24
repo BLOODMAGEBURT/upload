@@ -20,7 +20,7 @@ import paramiko
 
 hostname = '192.168.1.135'
 username = 'root'
-password = '11111'
+password = '123456'
 port = 22
 
 
@@ -69,6 +69,10 @@ def upload(local_dir, remote_dir):
 
 if __name__ == '__main__':
     local_dir = 'D:/dist'  # 本地需要上传的文件所处的目录,最后不要带斜杠
+    # path = os.getcwd()
+    # print('path:{}'.format(path))
+    # local_dir = os.path.join(path, 'dist')
     remote_dir = '/home/data/www/saaspro/public/admin/'  # linux下目录，最后必须带斜杠
+    # remote_dir = '/home/data/www/'  # linux下目录，最后必须带斜杠
 
     upload(local_dir, remote_dir)
